@@ -19,7 +19,7 @@ configurations.
 ## Installation
 
 git clone
-https://github.com/@@@@@@@@/email-header-checker.git
+https://github.com/Hurkins/email-header-analyzer.git
 
 cd email-header-checker
 
