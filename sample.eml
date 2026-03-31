@@ -1,0 +1,43 @@
+Return-Path: <sender@demo-mail.com>
+Received: from mail.demo-mail.com (mail.demo-mail.com [203.0.113.45])
+ by mx.receiver-example.net with ESMTP id abc123xyz
+ for <user@receiver-example.net>; Tue, 11 Mar 2025 10:22:33 +0000
+Received: from smtp.demo-mail.com (smtp.demo-mail.com [203.0.113.46])
+ by mail.demo-mail.com with ESMTP id def456uvw;
+ Tue, 11 Mar 2025 10:22:30 +0000
+Authentication-Results: mx.receiver-example.net;
+ spf=pass smtp.mailfrom=demo-mail.com;
+ dkim=pass header.d=demo-mail.com;
+ dmarc=pass header.from=demo-mail.com
+ARC-Seal: i=1; a=rsa-sha256; d=receiver-example.net; s=arcselector;
+ t=1741688553; cv=none;
+ b=FAKEARCSEALVALUE1234567890abcdef
+ARC-Message-Signature: i=1; a=rsa-sha256; d=receiver-example.net; s=arcselector;
+ t=1741688553; c=relaxed/relaxed;
+ bh=FAKEBODYHASH1234567890abcdef;
+ b=FAKEMESSAGESIGNATURE1234567890abcdef
+ARC-Authentication-Results: i=1; mx.receiver-example.net;
+ spf=pass smtp.mailfrom=demo-mail.com;
+ dkim=pass header.d=demo-mail.com;
+ dmarc=pass header.from=demo-mail.com
+DKIM-Signature: v=1; a=rsa-sha256; d=demo-mail.com; s=selector1;
+ c=relaxed/relaxed; q=dns/txt;
+ h=from:to:subject:date:message-id;
+ bh=FAKEBODYHASH1234567890abcdef;
+ b=FAKEDKIMSIGNATURE1234567890abcdef
+From: "Demo Sender" <sender@demo-mail.com>
+To: "Example User" <user@receiver-example.net>
+Subject: Test Email for Header Analysis
+Date: Tue, 11 Mar 2025 10:22:29 +0000
+Message-ID: <20250311.102229.123456789@demo-mail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+This is a harmless sample email used for testing email header analysis tools.
+
+All domains, message IDs, and IP addresses are fictional and reserved for
+documentation or testing purposes.
+
+If you are seeing this message in a parser or security tool, the sample
+file is functioning correctly.
