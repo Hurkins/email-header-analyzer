@@ -26,11 +26,12 @@ cd email-header-checker
 pip install -r requirements.txt
 
 ## Example usage
-On linux
+On linux:
 
 ./headers_checker sample.eml
 
-On windows 
+On windows:
+
 Python headers_checker sample
 ## Status
 
