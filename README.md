@@ -51,5 +51,5 @@ Future improvements may include:
 Email authentication headers can be complex and difficult to interpret manually.
 
 This tool was built to simplify inspection of SPF, DKIM, DMARC, and ARC authentication results directly 
-from `.eml` files. 
+from `.eml` files locally. 
 
